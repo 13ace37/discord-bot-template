@@ -52,9 +52,9 @@ Code outside a function is to be avoided.
 
 ## Disclaimer
 
-** This project is licensed under the MIT License. **
-I do not take responsibility for any of your bots. 
+**This project is licensed under the MIT License.**
 
+I do not take responsibility for any of your bots. 
 You are free to use this template as long as you follow the MIT License and so keep my name somewhere in your project.
 
 © Riccardo "ace" H. 2021
