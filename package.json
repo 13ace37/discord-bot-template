@@ -1,0 +1,25 @@
+{
+  "name": "discord-bot-template",
+  "version": "0.0.1",
+  "description": "A discord bot template for discord.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node srv/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/13ace37/discord-bot-template.git"
+  },
+  "keywords": [
+    "discord.js",
+    "discord",
+    "bot",
+    "template"
+  ],
+  "author": "Riccardo \"ace\" H.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/13ace37/discord-bot-template/issues"
+  },
+  "homepage": "https://github.com/13ace37/discord-bot-template#readme"
+}
