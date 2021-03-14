@@ -33,6 +33,48 @@ This repo houses my discord.js bot template. I'll warn you that my coding style 
 
 You can find a `index.js` in any of the subfolders of the `src` folder. These are meant for the main code of the given section.
 
+### Commands
+
+The command name is defined by the filename. If you want a `!hello` command, you'll need to create a file named `hello.js` in the `src/Bot/Commands/` folder.
+
+Template:
+
+
+```js
+let Command = require("."); //gets the default Command class
+
+module.exports = class extends Command {
+	// must be defined - returns a string with the description of the command function
+	// can also return false - gets replaced with N/A
+	getInfo() { 
+		return "shows all commands";
+	}
+	// must be defined - runs if users types the command
+	/* expected result: 
+		Bot: Hello I'm a bot.
+		Bot: @User, thanks for using this bot.
+	*/
+	run() {
+		this.send("Hello I'm a bot.");
+		this.reply("thanks for using this bot.");
+	}
+}
+```
+
+Default functions/variables:
+
+```js
+this.message 		// message object returned from onMessage event
+this.Client 		// discord bot client object
+
+
+this.send(message)	// sends a normal message in the channel where the command got executed
+
+// replies to the user with a tag in the channel where the command got executed
+// Format: @user, {message}
+this.reply(message)
+```
+
 ## Code Style
 
 - The code is heavily object-based without any non-object variables.
