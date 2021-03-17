@@ -8,6 +8,8 @@ module.exports = class Bot {
 		this.Client = new this.Discord.Client;
 		this.registerCommands();
 		this.Client.on("message", (message) => require(__dirname + "/commandHandler")(message, this));
+		this.Client.Logger = require(__dirname + "/Logger");
+		this.Client.Logger = new this.Client.Logger(this.Client);
 	}
 
 	registerCommands() {
