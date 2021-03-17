@@ -35,6 +35,31 @@ The bot can be started by using `node src/index.js {token}` - the token in the c
 
 You can find a `index.js` in any of the subfolders of the `src` folder. These are meant for the main code of the given section.
 
+### Logging
+
+I provide a custom logger using `this.Client.Logger`. This class holds 3 functions and they represent 3 log "levels": `log, warn, err`.
+The log files are created in the root folder under `/logs` and are named `out-{date}.log` and `err-{date}.log`. The "err" one hold the warnings and errors and the rest goes to the "out" one.
+
+
+Example:
+
+```js
+
+// The logID is saved internally and get increased for each log starting at 1.
+this.Client.Logger.log("Connected to the server!"); // expected output: LOG  ~ [DATE] [TIME] #1: Connected to the server! 
+this.Client.Logger.log("Connected to the server!"); // expected output: LOG  ~ [DATE] [TIME] #2: Connected to the server!
+this.Client.Logger.log("Connected to the server!", 773); // expected output: LOG  ~ [DATE] [TIME] #773: Connected to the server!  
+
+// The logID only effects the .log() function the .warn() and .error() function print 0 or the one you provide.
+this.Client.Logger.log("Connection not stable!"); // expected output: WARN ~ [DATE] [TIME] #0: Connection not stable!
+this.Client.Logger.log("Connection not stable!", 34); // expected output: WARN ~ [DATE] [TIME] #34: Connection not stable!
+
+// The logID only effects the .log() function the .warn() and .error() function print 0 or the one you provide
+this.Client.Logger.log("Not connected to the server!"); // expected output: ERR  ~ [DATE] [TIME] #0: Not connected to the server!
+this.Client.Logger.log("Not connected to the server!", 21); // expected output: ERR  ~ [DATE] [TIME] #21: Not connected to the server! 
+
+```
+
 ### Commands
 
 The command name is defined by the filename. If you want a `!hello` command, you'll need to create a file named `hello.js` in the `src/Bot/Commands/` folder.

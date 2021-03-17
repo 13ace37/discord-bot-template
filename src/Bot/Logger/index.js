@@ -17,15 +17,15 @@ module.exports = class Logger {
 
 	log(message, id = this.logID) { // basic log
 		if (id == this.logID) this.logID++; // increase log id if no id is provided
-		this.Console.log("LOG  ~",this.timeStamp(), id, message);
+		this.Console.log("LOG  ~",this.timeStamp(), `#${id}:`, message);
 	}
 
 	warn(message, id = 0) { // basic warn log
-		this.Console.warn("WARN ~", this.timeStamp(), id, message);
+		this.Console.warn("WARN ~", this.timeStamp(), `#${id}:`, message);
 	}
 
 	error(message, id = 0) { // basic error log
-		this.Console.error("ERR  ~",this.timeStamp(), id, message);
+		this.Console.error("ERR  ~",this.timeStamp(), `#${id}:`, message);
 	}
 
 }
