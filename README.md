@@ -15,6 +15,8 @@
 
 This repo houses my discord.js bot template. I'll warn you that my coding style is kinda weird and I change it pretty often. So this might not match your style. 
 
+The bot can be started by using `node src/index.js {token}` - the token in the config file will overwrite the command line argument!
+
 ## Requirements 
 
 <kbd><img src="./.img/node.png" height="20"/></kbd> **NodeJS Version:** ^15.5.0+<br/>
