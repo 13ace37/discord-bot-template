@@ -88,7 +88,7 @@ Code outside a function is to be avoided.
 
 ## Usage
 
-1. Clone the repo `git clone https://github.com/13ace37/surftimer-bot.git REPOSITORY`
+1. Fork or clone the repo `git clone https://github.com/13ace37/surftimer-bot.git REPOSITORY`
 1. Change remote orign `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git`
 1. Make your changes
 
