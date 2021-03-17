@@ -47,7 +47,7 @@ module.exports = class extends Command {
 	// must be defined - returns a string with the description of the command function
 	// can also return false - gets replaced with N/A
 	getInfo() { 
-		return "shows all commands";
+		return "says hello and thanks the user";
 	}
 	// must be defined - runs if users types the command
 	/* expected result: 
