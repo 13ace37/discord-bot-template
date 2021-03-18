@@ -51,12 +51,12 @@ this.Client.Logger.log("Connected to the server!"); // expected output: LOG  ~ [
 this.Client.Logger.log("Connected to the server!", 773); // expected output: LOG  ~ [DATE] [TIME] #773: Connected to the server!  
 
 // The logID only effects the .log() function the .warn() and .error() function print 0 or the one you provide.
-this.Client.Logger.log("Connection not stable!"); // expected output: WARN ~ [DATE] [TIME] #0: Connection not stable!
-this.Client.Logger.log("Connection not stable!", 34); // expected output: WARN ~ [DATE] [TIME] #34: Connection not stable!
+this.Client.Logger.warn("Connection not stable!"); // expected output: WARN ~ [DATE] [TIME] #0: Connection not stable!
+this.Client.Logger.warn("Connection not stable!", 34); // expected output: WARN ~ [DATE] [TIME] #34: Connection not stable!
 
 // The logID only effects the .log() function the .warn() and .error() function print 0 or the one you provide
-this.Client.Logger.log("Not connected to the server!"); // expected output: ERR  ~ [DATE] [TIME] #0: Not connected to the server!
-this.Client.Logger.log("Not connected to the server!", 21); // expected output: ERR  ~ [DATE] [TIME] #21: Not connected to the server! 
+this.Client.Logger.error("Not connected to the server!"); // expected output: ERR  ~ [DATE] [TIME] #0: Not connected to the server!
+this.Client.Logger.error("Not connected to the server!", 21); // expected output: ERR  ~ [DATE] [TIME] #21: Not connected to the server! 
 
 ```
 
